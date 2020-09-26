@@ -15,6 +15,9 @@ public class Main {
         ProductManager productManager = new ProductManager();
         List<Product> productList = new ArrayList<>();
         Scanner input = new Scanner(System.in);
+        int choose= -1;
+
+        while (choose!=0){
         System.out.println("Menu: ");
         System.out.println("1: add a newProduct");
         System.out.println("2: edit a Product");
@@ -26,7 +29,7 @@ public class Main {
         System.out.println("0: exit");
 
         System.out.println("enter your choose: ");
-        int choose = input.nextInt();
+         choose = input.nextInt();
 
 
         switch (choose) {
@@ -80,11 +83,8 @@ public class Main {
                 break;
             case 0:
                 System.exit(0);
-                break;
-
-
         }
-
-
+        }
+        System.out.println("________________________");
     }
 }

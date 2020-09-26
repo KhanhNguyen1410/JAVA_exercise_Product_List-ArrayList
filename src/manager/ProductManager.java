@@ -22,7 +22,7 @@ public class ProductManager implements MyManager<Product> {
     public void add(Product object) {
         if (!isExisted(object.getId()))
         products.add(object);
-        System.out.println("ID is existed");
+        System.out.println("ID is existed, plz use edit product");
     }
 
     @Override
