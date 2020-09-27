@@ -73,8 +73,10 @@ public class Main {
                 break;
             case 5:
                 System.out.print("enter a Name: ");
+                input.nextLine();
                 String nameFind = input.nextLine();
-                System.out.println(productManager.findByName(nameFind));
+                productList = productManager.findByName(nameFind);
+                display(productList);
                 break;
             case 6:
                 productList = productManager.showAll();

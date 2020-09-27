@@ -66,13 +66,14 @@ public class ProductManager implements MyManager<Product> {
     }
 
     @Override
-    public Product findByName(String Name) {
+    public List<Product> findByName(String Name) {
+        List<Product> nameList = new ArrayList<>();
         for (int i = 0; i < products.size(); i++) {
-            if (Name == products.get(i).getName()){
-                return products.get(i);
+            if ( products.get(i).getName().equals(Name)){
+               nameList.add(products.get(i));
             }
         }
-        return null;
+        return nameList;
     }
 
     @Override

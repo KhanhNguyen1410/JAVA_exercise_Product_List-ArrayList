@@ -7,7 +7,7 @@ public interface MyManager<T> {
     void edit(T o);
     void delete(int id);
     T findById(int id);
-    T findByName(String Name);
+    List<T> findByName(String Name);
     List<T> showAll();
     boolean isExisted(int id);
 }
